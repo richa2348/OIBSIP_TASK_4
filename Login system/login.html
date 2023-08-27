@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="system.css">
+    <title>Login Authentication</title>
+</head>
+<body>
+  <div id="loginSystem">
+    <div id="title">
+      <h1>Login System</h1>
+    </div>
+    
+    <div id="buttonContainer">
+      <button onclick="showRegistrationDialog()">Register</button>
+      <button onclick="showLoginDialog()">Login</button>
+    </div>
+    
+    <div class="form-box" id="registerFormBox">
+      <h2>Registration</h2>
+      <form id="registerForm">
+        <label for="newUsername">New Username:</label>
+        <input type="text" id="newUsername" name="newUsername" required><br><br>
+        
+        <label for="newPassword">New Password:</label>
+        <input type="password" id="newPassword" name="newPassword" required><br><br>
+      </form>
+      <button type="button" onclick="register()">Register</button>
+    </div>
+
+    <div class="form-box" id="loginFormBox">
+      <h2>Login</h2>
+      <form id="loginForm">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required><br><br>
+        
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required><br><br>
+      </form>
+      <button type="button" onclick="login()">Login</button>
+    </div>
+  </div>
+  
+  <div id="securePage">
+    <h2>Welcome to the Secure Page!</h2>
+    <p>This page can only be accessed after successful login.</p>
+  </div>
+
+  <script src="auth.js"></script>
+</body>
+</html>
